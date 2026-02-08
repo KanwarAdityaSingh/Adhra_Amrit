@@ -1,0 +1,219 @@
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) 0;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-accent);
+  margin: var(--spacing-sm) auto 0;
+  border-radius: 2px;
+}
+
+.brandsSection {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.brandCard {
+  background: linear-gradient(145deg, var(--color-white) 0%, var(--color-cream) 100%);
+  padding: var(--spacing-xl);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid transparent;
+  border-image: var(--gradient-accent) 1;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.brandCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.brandHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.brandBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.85rem;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border-radius: 50px;
+}
+
+.brandDescription {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.brandFeatures {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(20, 64, 58, 0.08);
+}
+
+.feature {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.feature strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.categoriesSection {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.categoryCard {
+  background: linear-gradient(145deg, var(--color-cream) 0%, var(--color-bg-warm) 100%);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform var(--transition-base);
+}
+
+.categoryCard:hover {
+  transform: translateY(-3px);
+}
+
+.categoryName {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.categoryCard p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.qualitySection {
+  background: linear-gradient(145deg, var(--color-cream) 0%, var(--color-bg-warm) 100%);
+  padding: var(--spacing-xl);
+  border-radius: 16px;
+}
+
+.qualitySection p {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.qualityPoints {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.qualityPoint {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.qualityPoint strong {
+  color: var(--color-primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 968px) {
+  .brandsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .qualityPoints {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .brandCard {
+    padding: var(--spacing-md);
+  }
+}
