@@ -341,6 +341,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .stickyImage {
+    height: 300px;
+  }
+}
+
 @media (max-width: 640px) {
   .valueItem {
     flex-direction: column;

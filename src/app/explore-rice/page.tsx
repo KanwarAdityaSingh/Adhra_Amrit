@@ -118,6 +118,7 @@ export default function ExploreRice() {
     <>
       <ParallaxHero
         imageUrl="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80"
+        mobileImageUrl="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80"
         title="Explore Rice"
         subtitle="Largest Basmati Rice Wholesalers And Rice Millers Across The Globe"
       />
@@ -168,6 +169,8 @@ export default function ExploreRice() {
           >
             <img
               src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80"
+              srcSet={`https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80 400w, https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80 600w`}
+              sizes="(max-width: 768px) 400px, 600px"
               alt="Rice field"
               className={styles.image}
             />
@@ -265,6 +268,8 @@ export default function ExploreRice() {
                   <div className={styles.varietyImageWrapper}>
                     <img
                       src={variety.image}
+                      srcSet={`${variety.image.replace('w=800', 'w=400')} 400w, ${variety.image} 800w`}
+                      sizes="(max-width: 768px) 400px, 800px"
                       alt={variety.name}
                       className={styles.varietyImage}
                     />

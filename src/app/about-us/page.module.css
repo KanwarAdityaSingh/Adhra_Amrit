@@ -350,4 +350,16 @@
   .pillarCard {
     padding: var(--spacing-md);
   }
+
+  .storyImageWrapper {
+    height: 250px;
+  }
+
+  .detailsGrid {
+    gap: var(--spacing-md);
+  }
+
+  .detailCard {
+    padding: var(--spacing-md);
+  }
 }

@@ -6,6 +6,7 @@ import styles from './ParallaxHero.module.css';
 
 interface ParallaxHeroProps {
   imageUrl: string;
+  mobileImageUrl?: string;
   title: string;
   subtitle?: string;
   badge?: string;
@@ -15,6 +16,7 @@ interface ParallaxHeroProps {
 
 export default function ParallaxHero({
   imageUrl,
+  mobileImageUrl,
   title,
   subtitle,
   badge,
@@ -37,9 +39,10 @@ export default function ParallaxHero({
       <motion.div
         className={styles.background}
         style={{
-          backgroundImage: `url(${imageUrl})`,
+          '--desktop-image': `url(${imageUrl})`,
+          '--mobile-image': mobileImageUrl ? `url(${mobileImageUrl})` : `url(${imageUrl})`,
           y: shouldReduceMotion ? 0 : backgroundY,
-        }}
+        } as React.CSSProperties}
       />
       {overlay && <div className={styles.overlay} />}
       <motion.div

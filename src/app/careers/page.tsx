@@ -184,6 +184,7 @@ export default function Careers() {
     <>
       <ParallaxHero
         imageUrl="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
+        mobileImageUrl="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
         title="Build Your Career With Adhra Amrit"
         subtitle="Join a team that values integrity, quality, and growth. Be part of a company making a difference in the agricultural products sector."
         badge="EMPOWERING GROWTH"
@@ -224,11 +225,17 @@ export default function Careers() {
                   <div className={styles.cultureText}>
                     <h3>{item.content}</h3>
                   </div>
-                ) : (
+                ) : item.image ? (
                   <div className={styles.cultureImageWrapper}>
-                    <img src={item.image} alt="Culture" className={styles.cultureImage} />
+                    <img
+                      src={item.image}
+                      srcSet={`${item.image.replace('w=600', 'w=300')} 300w, ${item.image} 600w`}
+                      sizes="(max-width: 768px) 300px, 600px"
+                      alt="Culture"
+                      className={styles.cultureImage}
+                    />
                   </div>
-                )}
+                ) : null}
               </motion.div>
             ))}
           </div>

@@ -30,6 +30,7 @@ export default function Leadership() {
     <>
       <ParallaxHero
         imageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80"
+        mobileImageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
         title="Meet The Visionaries"
         subtitle="Inspirational Minds Shaping Adhra Amrit's Vision And Success"
         badge="LEADERSHIP"

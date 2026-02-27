@@ -30,6 +30,7 @@ export default function AboutUs() {
     <>
       <ParallaxHero
         imageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80"
+        mobileImageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
         title="Our Story"
         subtitle="Building trust through quality, one grain at a time"
       />
@@ -59,6 +60,8 @@ export default function AboutUs() {
             <div className={styles.storyImageWrapper}>
               <img
                 src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80"
+                srcSet={`https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80 400w, https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80 800w`}
+                sizes="(max-width: 768px) 400px, 800px"
                 alt="Rice processing"
                 className={styles.storyImage}
               />

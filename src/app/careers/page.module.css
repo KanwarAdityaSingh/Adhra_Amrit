@@ -382,6 +382,10 @@
     grid-column: span 1 !important;
   }
 
+  .cultureImageWrapper {
+    height: 100%;
+  }
+
   .positionMeta {
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -389,5 +393,14 @@
 
   .testimonialCard {
     padding: var(--spacing-md);
+  }
+
+  .valuesStrip {
+    padding: var(--spacing-md) 0;
+  }
+
+  .valuePill {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }

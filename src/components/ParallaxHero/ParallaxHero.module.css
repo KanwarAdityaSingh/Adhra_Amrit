@@ -13,10 +13,18 @@
   left: 0;
   right: 0;
   bottom: -20%;
+  background-image: var(--desktop-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .background {
+    background-image: var(--mobile-image);
+    background-position: center;
+  }
 }
 
 .overlay {

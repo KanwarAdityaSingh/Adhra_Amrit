@@ -7,6 +7,7 @@ import PrimaryButton from '@/components/PrimaryButton/PrimaryButton';
 import ValueCard from '@/components/ValueCard/ValueCard';
 import Reveal from '@/components/Reveal/Reveal';
 import AnimatedCounter from '@/components/AnimatedCounter/AnimatedCounter';
+import { useResponsiveImage } from '@/hooks/useResponsiveImage';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -19,6 +20,28 @@ export default function Home() {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+
+  // Responsive images
+  const heroImage = useResponsiveImage(
+    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80',
+    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80'
+  );
+  const aboutImage = useResponsiveImage(
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80'
+  );
+  const hariomImage = useResponsiveImage(
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80',
+    'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80'
+  );
+  const tamaalImage = useResponsiveImage(
+    'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80',
+    'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80'
+  );
+  const ctaImage = useResponsiveImage(
+    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=80',
+    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80'
+  );
 
   const heroVariants = {
     hidden: { opacity: 0 },
@@ -53,9 +76,10 @@ export default function Home() {
         <motion.div
           className={styles.heroBackground}
           style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80)`,
+            '--desktop-image': `url(https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80)`,
+            '--mobile-image': `url(https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80)`,
             y: shouldReduceMotion ? 0 : backgroundY,
-          }}
+          } as React.CSSProperties}
         />
         <div className={styles.heroOverlay} />
         <motion.div
@@ -108,7 +132,9 @@ export default function Home() {
             <Reveal delay={0.2}>
               <div className={styles.aboutImageWrapper}>
                 <img
-                  src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80"
+                  src={aboutImage}
+                  srcSet={`https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80 400w, https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80 800w`}
+                  sizes="(max-width: 768px) 400px, 800px"
                   alt="Premium basmati rice"
                   className={styles.aboutImage}
                 />
@@ -255,7 +281,9 @@ export default function Home() {
               >
                 <div className={styles.brandImageWrapper}>
                   <img
-                    src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80"
+                    src={hariomImage}
+                    srcSet={`https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80 400w, https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80 600w`}
+                    sizes="(max-width: 768px) 400px, 600px"
                     alt="Hariom basmati rice"
                     className={styles.brandImage}
                   />
@@ -280,7 +308,9 @@ export default function Home() {
               >
                 <div className={styles.brandImageWrapper}>
                   <img
-                    src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80"
+                    src={tamaalImage}
+                    srcSet={`https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80 400w, https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80 600w`}
+                    sizes="(max-width: 768px) 400px, 600px"
                     alt="Tamaal basmati rice"
                     className={styles.brandImage}
                   />

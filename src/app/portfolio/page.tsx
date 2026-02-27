@@ -80,6 +80,7 @@ export default function Portfolio() {
     <>
       <ParallaxHero
         imageUrl="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=1920&q=80"
+        mobileImageUrl="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&q=80"
         title="Our Portfolio"
         subtitle="Premium quality rice products for every need"
       />
@@ -103,6 +104,8 @@ export default function Portfolio() {
                   <div className={styles.brandImageWrapper}>
                     <img
                       src={brand.image}
+                      srcSet={`${brand.image.replace('w=800', 'w=400')} 400w, ${brand.image} 800w`}
+                      sizes="(max-width: 768px) 400px, 800px"
                       alt={`${brand.name} basmati rice`}
                       className={styles.brandImage}
                     />
@@ -148,6 +151,8 @@ export default function Portfolio() {
                   <div className={styles.categoryImageWrapper}>
                     <img
                       src={category.image}
+                      srcSet={`${category.image.replace('w=600', 'w=300')} 300w, ${category.image} 600w`}
+                      sizes="(max-width: 768px) 300px, 600px"
                       alt={category.name}
                       className={styles.categoryImage}
                     />

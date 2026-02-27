@@ -339,12 +339,20 @@
     padding: var(--spacing-md);
   }
 
+  .brandImageWrapper {
+    aspect-ratio: 4 / 3;
+  }
+
   .categoryCard {
     padding: 0;
   }
 
   .categoryContent {
     padding: var(--spacing-md);
+  }
+
+  .categoryImageWrapper {
+    aspect-ratio: 3 / 2;
   }
 
   .timeline {
@@ -363,5 +371,9 @@
 
   .timelineContent {
     padding: var(--spacing-md);
+  }
+
+  .qualityIntro {
+    font-size: 1rem;
   }
 }
