@@ -6,6 +6,7 @@ import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
 import PrimaryButton from '@/components/PrimaryButton/PrimaryButton';
 import ValueCard from '@/components/ValueCard/ValueCard';
 import Reveal from '@/components/Reveal/Reveal';
+import AnimatedCounter from '@/components/AnimatedCounter/AnimatedCounter';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -52,9 +53,11 @@ export default function Home() {
         <motion.div
           className={styles.heroBackground}
           style={{
+            backgroundImage: `url(https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80)`,
             y: shouldReduceMotion ? 0 : backgroundY,
           }}
         />
+        <div className={styles.heroOverlay} />
         <motion.div
           className={styles.heroContent}
           variants={heroVariants}
@@ -102,8 +105,50 @@ export default function Home() {
               </p>
               <PrimaryButton href="/about-us">Learn More</PrimaryButton>
             </div>
-            <div className={styles.aboutPattern}></div>
+            <Reveal delay={0.2}>
+              <div className={styles.aboutImageWrapper}>
+                <img
+                  src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80"
+                  alt="Premium basmati rice"
+                  className={styles.aboutImage}
+                />
+              </div>
+            </Reveal>
           </div>
+        </Reveal>
+      </SectionWrapper>
+
+      {/* By The Numbers Section */}
+      <SectionWrapper variant="dark">
+        <Reveal>
+          <div className={styles.statsSection}>
+            <h2 className={styles.statsTitle}>By The Numbers</h2>
+            <div className={styles.statsGrid}>
+              <div className={styles.statCard}>
+                <AnimatedCounter
+                  value={4}
+                  suffix="+"
+                  className={styles.statNumber}
+                />
+                <p className={styles.statLabel}>Years of Excellence</p>
+              </div>
+              <div className={styles.statCard}>
+                <AnimatedCounter
+                  value={2}
+                  className={styles.statNumber}
+                />
+                <p className={styles.statLabel}>Premium Brands</p>
+              </div>
+              <div className={styles.statCard}>
+                <AnimatedCounter
+                  value={100}
+                  suffix="%"
+                  className={styles.statNumber}
+                />
+                <p className={styles.statLabel}>Quality Commitment</p>
+              </div>
+            </div>
+        </div>
         </Reveal>
       </SectionWrapper>
 
@@ -116,30 +161,79 @@ export default function Home() {
               The principles that guide everything we do
             </p>
             <div className={styles.valuesGrid}>
-              <ValueCard
-                title="Honesty"
-                description="Transparency in every transaction. We believe in building 
-                relationships based on trust and integrity, ensuring our partners know 
-                exactly what they're getting."
-                icon="✓"
-              />
-              <ValueCard
-                title="Quality"
-                description="Uncompromising standards from paddy to plate. Every grain 
-                is carefully selected and processed to meet the highest quality benchmarks 
-                in the industry."
-                icon="★"
-              />
-              <ValueCard
-                title="Sustainability"
-                description="Responsible sourcing and ethical practices. We work closely 
-                with farmers and ensure sustainable agricultural practices that benefit 
-                communities and the environment."
-                icon="🌾"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0 }}
+              >
+                <ValueCard
+                  title="Honesty"
+                  description="Transparency in every transaction. We believe in building 
+                  relationships based on trust and integrity, ensuring our partners know 
+                  exactly what they're getting."
+                  icon="✓"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+              >
+                <ValueCard
+                  title="Quality"
+                  description="Uncompromising standards from paddy to plate. Every grain 
+                  is carefully selected and processed to meet the highest quality benchmarks 
+                  in the industry."
+                  icon="★"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <ValueCard
+                  title="Sustainability"
+                  description="Responsible sourcing and ethical practices. We work closely 
+                  with farmers and ensure sustainable agricultural practices that benefit 
+                  communities and the environment."
+                  icon="🌾"
+                />
+              </motion.div>
             </div>
           </div>
         </Reveal>
+      </SectionWrapper>
+
+      {/* Our Promise Strip */}
+      <SectionWrapper>
+        <div className={styles.promiseStrip}>
+          <motion.div
+            className={styles.promiseStripInner}
+            animate={{
+              x: [0, -50 * 6],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+          >
+            {['Purity', 'Authenticity', 'Heritage', 'Trust', 'Quality', 'Sustainability'].map((word, index) => (
+              <span key={index} className={styles.promiseWord}>
+                {word}
+              </span>
+            ))}
+            {['Purity', 'Authenticity', 'Heritage', 'Trust', 'Quality', 'Sustainability'].map((word, index) => (
+              <span key={`dup-${index}`} className={styles.promiseWord}>
+                {word}
+              </span>
+            ))}
+          </motion.div>
+        </div>
       </SectionWrapper>
 
       {/* Brands Section */}
@@ -151,22 +245,56 @@ export default function Home() {
               Premium quality rice for every need
             </p>
             <div className={styles.brandsGrid}>
-              <div className={styles.brandCard}>
-                <h3 className={styles.brandName}>Hariom</h3>
-                <p className={styles.brandDescription}>
-                  Our premium basmati rice brand, known for its exceptional length, 
-                  delicate aroma, and superior quality. Perfect for discerning customers 
-                  who demand the finest.
-                </p>
-              </div>
-              <div className={styles.brandCard}>
-                <h3 className={styles.brandName}>Tamaal</h3>
-                <p className={styles.brandDescription}>
-                  Quality basmati rice that brings premium taste to everyday meals. 
-                  Tamaal represents our commitment to making excellent rice accessible 
-                  to families across India and beyond.
-                </p>
-              </div>
+              <motion.div
+                className={styles.brandCard}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+              >
+                <div className={styles.brandImageWrapper}>
+                  <img
+                    src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80"
+                    alt="Hariom basmati rice"
+                    className={styles.brandImage}
+                  />
+                  <div className={styles.brandImageOverlay} />
+                </div>
+                <div className={styles.brandContent}>
+                  <h3 className={styles.brandName}>Hariom</h3>
+                  <p className={styles.brandDescription}>
+                    Our premium basmati rice brand, known for its exceptional length, 
+                    delicate aroma, and superior quality. Perfect for discerning customers 
+                    who demand the finest.
+                  </p>
+                </div>
+              </motion.div>
+              <motion.div
+                className={styles.brandCard}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+              >
+                <div className={styles.brandImageWrapper}>
+                  <img
+                    src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80"
+                    alt="Tamaal basmati rice"
+                    className={styles.brandImage}
+                  />
+                  <div className={styles.brandImageOverlay} />
+                </div>
+                <div className={styles.brandContent}>
+                  <h3 className={styles.brandName}>Tamaal</h3>
+                  <p className={styles.brandDescription}>
+                    Quality basmati rice that brings premium taste to everyday meals. 
+                    Tamaal represents our commitment to making excellent rice accessible 
+                    to families across India and beyond.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </Reveal>
@@ -174,18 +302,21 @@ export default function Home() {
 
       {/* CTA Section */}
       <SectionWrapper variant="dark">
-        <Reveal>
-          <div className={styles.ctaSection}>
-            <h2 className={styles.ctaTitle}>
-              Connect with our experts for business enquiries
-            </h2>
-            <p className={styles.ctaSubtext}>
-              Whether you're a wholesaler, distributor, or looking to establish a 
-              long-term partnership, we're here to help.
-            </p>
-            <PrimaryButton href="/contact-us">Enquire Now</PrimaryButton>
-          </div>
-        </Reveal>
+        <div className={styles.ctaSection}>
+          <div className={styles.ctaBackground} />
+          <Reveal>
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaTitle}>
+                Connect with our experts for business enquiries
+              </h2>
+              <p className={styles.ctaSubtext}>
+                Whether you're a wholesaler, distributor, or looking to establish a 
+                long-term partnership, we're here to help.
+              </p>
+              <PrimaryButton href="/contact-us">Enquire Now</PrimaryButton>
+            </div>
+          </Reveal>
+    </div>
       </SectionWrapper>
     </>
   );
