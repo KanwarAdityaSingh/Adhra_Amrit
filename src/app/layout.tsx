@@ -24,7 +24,7 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: "Adhra Amrit - Purity in Every Grain",
-  description: "Adhra Amrit Agro Products LLP - Delhi-based basmati rice wholesaler specializing in premium quality rice under brands Hariom and Tamaal.",
+  description: "Adhra Amrit Agro Products LLP - Rice miller based in Haryana specializing in premium quality rice under brands Hariom and Tamaal.",
 };
 
 export default function RootLayout({

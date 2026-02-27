@@ -115,9 +115,9 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2 className={styles.sectionTitle}>About Adhra Amrit</h2>
               <p className={styles.aboutText}>
-                Adhra Amrit Agro Products LLP is a Delhi-based company specializing in 
-                the wholesale of premium agricultural products, with a primary focus on 
-                basmati rice. Incorporated in 2020, we have quickly established ourselves 
+                Adhra Amrit Agro Products LLP is a rice miller based in Haryana specializing in 
+                premium agricultural products, with a primary focus on 
+                basmati rice. We have quickly established ourselves 
                 as a trusted partner for quality-conscious buyers.
               </p>
               <p className={styles.aboutText}>

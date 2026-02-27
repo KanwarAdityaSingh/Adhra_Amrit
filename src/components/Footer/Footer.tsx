@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className={styles.logoMain}>ADHRA AMRIT</h3>
             <p className={styles.logoTagline}>PURITY IN EVERY GRAIN</p>
             <p className={styles.description}>
-              Delhi-based basmati rice wholesaler specializing in premium quality rice 
+              Rice miller based in Haryana specializing in premium quality rice 
               with a commitment to honesty, quality, and sustainability.
             </p>
           </div>
@@ -36,12 +36,9 @@ export default function Footer() {
           <div className={styles.contact}>
             <h4>Contact</h4>
             <p>
-              House No. 25, 1st Floor, Chamber 3<br />
-              Block G, Pocket 2, Sector 11<br />
-              Rohini, Delhi, 110085
-            </p>
-            <p className={styles.llpin}>
-              LLPIN: AAU-3262
+              Plot No. 9, Mega Food Park<br />
+              Sector-23, Sonipat<br />
+              Haryana
             </p>
           </div>
         </div>

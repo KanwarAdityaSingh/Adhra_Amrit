@@ -104,19 +104,11 @@ export default function ContactUs() {
               <h2 className={styles.sectionTitle}>Contact Information</h2>
               
               <div className={styles.infoCard}>
-                <h3>Registered Office</h3>
+                <h3>Address</h3>
                 <p>
-                  House No. 25, 1st Floor, Chamber 3<br />
-                  Block G, Pocket 2, Sector 11<br />
-                  Rohini, Delhi, 110085
-                </p>
-              </div>
-
-              <div className={styles.infoCard}>
-                <h3>Company Details</h3>
-                <p>
-                  <strong>LLPIN:</strong> AAU-3262<br />
-                  <strong>Incorporated:</strong> October 20, 2020
+                  Plot No. 9, Mega Food Park<br />
+                  Sector-23, Sonipat<br />
+                  Haryana
                 </p>
               </div>
 
@@ -145,7 +137,7 @@ export default function ContactUs() {
             <div className={styles.mapPlaceholder}>
               <p>Map location will be displayed here</p>
               <p className={styles.mapAddress}>
-                House No. 25, 1st Floor, Chamber 3, Block G, Pocket 2, Sector 11, Rohini, Delhi, 110085
+                Plot No. 9, Mega Food Park, Sector-23, Sonipat, Haryana
               </p>
             </div>
           </div>

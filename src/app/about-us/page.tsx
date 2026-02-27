@@ -42,15 +42,14 @@ export default function AboutUs() {
             <div className={styles.storyContent}>
               <h2 className={styles.sectionTitle}>Our Story</h2>
               <p className={styles.storyText}>
-                Adhra Amrit Agro Products LLP was incorporated on October 20, 2020, 
-                with a vision to bring the finest basmati rice to markets across India 
-                and beyond. Based in Delhi, we have quickly established ourselves as a 
-                trusted name in the agricultural products wholesale sector.
+                Adhra Amrit Agro Products LLP brings the finest basmati rice to markets across India 
+                and beyond. Based in Haryana, we have quickly established ourselves as a 
+                trusted name in the rice milling sector.
               </p>
               <p className={styles.storyText}>
                 Our journey began with a simple yet powerful commitment: to provide 
                 premium quality rice that meets the highest standards of purity and 
-                authenticity. From our registered office in Rohini, Delhi, we have 
+                authenticity. From our facility in Sonipat, Haryana, we have 
                 built strong relationships with farmers, processors, and distributors, 
                 ensuring a seamless supply chain from paddy to plate.
               </p>
@@ -82,7 +81,7 @@ export default function AboutUs() {
           >
             <h2 className={styles.cardTitle}>Our Vision</h2>
             <p className={styles.cardText}>
-              To be recognized as India's most trusted basmati rice wholesaler, 
+              To be recognized as India's most trusted basmati rice miller, 
               known for uncompromising quality, ethical business practices, and 
               sustainable agricultural partnerships. We aim to bridge the gap between 
               premium agricultural produce and quality-conscious consumers worldwide.
@@ -161,7 +160,7 @@ export default function AboutUs() {
       <SectionWrapper>
         <Reveal>
           <div className={styles.detailsSection}>
-            <h2 className={styles.detailsTitle}>Company Details</h2>
+            <h2 className={styles.detailsTitle}>Our Location</h2>
             <div className={styles.detailsGrid}>
               <motion.div
                 className={styles.detailCard}
@@ -170,31 +169,11 @@ export default function AboutUs() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0 }}
               >
-                <strong className={styles.detailLabel}>Incorporation Date</strong>
-                <p className={styles.detailValue}>October 20, 2020</p>
-              </motion.div>
-              <motion.div
-                className={styles.detailCard}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                <strong className={styles.detailLabel}>LLPIN</strong>
-                <p className={styles.detailValue}>AAU-3262</p>
-              </motion.div>
-              <motion.div
-                className={styles.detailCard}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <strong className={styles.detailLabel}>Registered Office</strong>
+                <strong className={styles.detailLabel}>Address</strong>
                 <p className={styles.detailValue}>
-                  House No. 25, 1st Floor, Chamber 3<br />
-                  Block G, Pocket 2, Sector 11<br />
-                  Rohini, Delhi, 110085
+                  Plot No. 9, Mega Food Park<br />
+                  Sector-23, Sonipat<br />
+                  Haryana
                 </p>
               </motion.div>
             </div>

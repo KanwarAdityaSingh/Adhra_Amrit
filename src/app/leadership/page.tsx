@@ -69,7 +69,7 @@ export default function Leadership() {
                 <p className={styles.keynoteText}>
                   As the Designated Partner of Adhra Amrit Agro Products LLP, I am proud
                   to lead a company that has quickly established itself as a trusted name
-                  in the basmati rice wholesale sector. Since our incorporation in 2020,
+                  in the basmati rice milling sector.
                   we have focused on building relationships based on honesty, maintaining
                   uncompromising quality standards, and ensuring sustainable practices
                   throughout our supply chain.

@@ -28,7 +28,7 @@ const values = [
   {
     number: 4,
     title: 'Aiming To Expand Our Reach',
-    description: 'As a growing basmati rice wholesaler, we aim to reach every corner of India and beyond, making premium quality rice accessible to all.',
+    description: 'As a growing basmati rice miller, we aim to reach every corner of India and beyond, making premium quality rice accessible to all.',
   },
   {
     number: 5,
