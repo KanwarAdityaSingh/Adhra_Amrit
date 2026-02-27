@@ -20,15 +20,14 @@ export default function Footer() {
             <ul>
               <li><Link href="/about-us">About Us</Link></li>
               <li><Link href="/portfolio">Portfolio</Link></li>
-              <li><Link href="/scale-size">Scale & Size</Link></li>
-              <li><Link href="/achievements">Achievements</Link></li>
+              <li><Link href="/explore-rice">Explore Rice</Link></li>
+              <li><Link href="/leadership">Leadership</Link></li>
             </ul>
           </div>
 
           <div className={styles.links}>
             <h4>Company</h4>
             <ul>
-              <li><Link href="/events">Events</Link></li>
               <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact-us">Contact Us</Link></li>
             </ul>

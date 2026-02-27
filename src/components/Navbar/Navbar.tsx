@@ -20,11 +20,10 @@ export default function Navbar() {
   const navLinks = [
     { href: '/about-us', label: 'About Us' },
     { href: '/portfolio', label: 'Portfolio' },
-    { href: '/scale-size', label: 'Scale & Size' },
-    { href: '/achievements', label: 'Achievements' },
-    { href: '/events', label: 'Events' },
-    { href: '/contact-us', label: 'Contact Us' },
+    { href: '/explore-rice', label: 'Explore Rice' },
+    { href: '/leadership', label: 'Leadership' },
     { href: '/careers', label: 'Careers' },
+    { href: '/contact-us', label: 'Contact Us' },
   ];
 
   return (
